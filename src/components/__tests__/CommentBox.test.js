@@ -23,7 +23,10 @@ it('has a text area that users can type in', () => {
     // and provide a fake (mock) event object
     wrapped.find('textarea').simulate('change', {
         target: {value: 'new comment'}
-    })
+    });
+
+    // force component to update (because setState is async)
+    wrapped.update();
 });
 
 afterEach(()=> {
