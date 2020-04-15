@@ -18,6 +18,14 @@ it('has a text area and a button', () => {
 
 });
 
+it('has a text area that users can type in', () => {
+    // find textarea, simulate a change event
+    // and provide a fake (mock) event object
+    wrapped.find('textarea').simulate('change', {
+        target: {value: 'new comment'}
+    })
+});
+
 afterEach(()=> {
     wrapped.unmount();
 });
