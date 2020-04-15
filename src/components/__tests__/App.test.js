@@ -7,6 +7,7 @@ import CommentList from 'components/CommentList';
 
 let wrapped;
 
+// function provided by jest. Runs before every test in this file.
 beforeEach(() => {
 
      wrapped = shallow(<App/>);
