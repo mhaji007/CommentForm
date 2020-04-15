@@ -27,6 +27,12 @@ it('has a text area that users can type in', () => {
 
     // force component to update (because setState is async)
     wrapped.update();
+
+    // make sure the component has received 
+    // the correct value prop
+    expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
+
+
 });
 
 afterEach(()=> {
