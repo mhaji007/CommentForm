@@ -23,7 +23,7 @@ it('creates on LI per comment', () => {
     expect(wrapped.find('li').length).toEqual(2);
 });
 
-it('shows the text fro each comment', ()=> {
+it('shows the text from each comment', ()=> {
     expect(wrapped.render().text()).toContain('Comment 1');
     expect(wrapped.render().text()).toContain('Comment 2');
 })
