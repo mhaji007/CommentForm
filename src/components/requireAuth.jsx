@@ -25,14 +25,15 @@ export default ChildComponent => {
     }
 
         render() {
-            return <ChildComponent />;
+            return <ChildComponent {...this.props} />;
         }
 
     }
 
     function mapStateToProps(state) {
         return {auth: state.auth}
+    }
 
     return connect(mapStateToProps)(ComposedComponent); 
-}
+
 }
