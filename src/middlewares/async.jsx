@@ -28,5 +28,18 @@ export default ({dispatch}) => next => action => {
         
     }
 
+    // wait for the promise to resolve
+    // get its data and then create a new action
+    // with the data and dispatch it
+
+    action.payload.then(function(response){
+        const newAction = {...action, payload:response};
+        dispatch(newAction);
+    });
+
+    
+
+
+
 };
 
